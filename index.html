@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Cat Gallery</title>
+	<link rel= "stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.1/css/bulma.css">
+	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+	<style type="text/class">
+		body { 
+			padding-top:40px; 
+		}
+		#root div {
+			display: inline-block;
+			margin: 6px 8px;
+		}
+
+		img {
+			display: block;
+			width: 400px;
+			height: 400px;
+		}
+
+	</style>
+</head>
+
+<body>
+	<div id="root" class= "container">
+		<hero-component></hero-component>
+		<div class="tile is-ancestor">
+			<tile-component  v-for="post in posts" :key="post.id">
+				<template slot="header-title">{{post.name}}</template>
+				<template slot="content-photo"><img :src= "post.imgAttribution"/> </template>
+				<template slot="button-modal">
+					<modal-component v-show="showModal" @close="showModal = false"></modal-component>
+					<button v-on:click="showModal=true">Show Cat</button>
+				</template>
+			</tile-component>	
+		</div>
+	</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.3.0/vue.js"></script>
+<script src="main.js"></script> 
+
+</body>
+</html>

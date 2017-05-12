@@ -1,0 +1,7 @@
+{
+"Cat":[
+{"id": 1, "name" : "Tabby", "imgSrc" : "img/434164568_fea0ad4013_z.jpg", "imgAttribution" : "http://thecatapi.com/api/images/get?sub_id=d55format=src&type=gif"},
+{"id": 2, "name" : "Tiger", "imgSrc" : "img/4154543904_6e2428c421_z.jpg", "imgAttribution" : "http://thecatapi.com/api/images/get?sub_id=3eoformat=src&type=gif" },
+{"id": 3, "name" : "Scaredy", "imgSrc" : "img/22252709_010df3379e_z.jpg", "imgAttribution" : "http://thecatapi.com/api/images/get?sub_id=MTgzMzEyNQformat=src&type=gif" }
+]
+}
