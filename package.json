@@ -8,6 +8,8 @@
     "vue-images": "^1.0.7"
   },
   "devDependencies": {
+    "bulma": "^0.4.1",
+    "http-server": "^0.10.0",
     "vue-images": "^1.0.7"
   },
   "scripts": {
