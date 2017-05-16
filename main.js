@@ -1,32 +1,36 @@
 
 var HeroComponent = Vue.component('hero-component', {
 	template: `
-	<section class="hero">
-			  <div class="hero-body">
-				<div class="container">
-				  <h1 class="title">
-					Cat Gallery
-				  </h1>
-				</div>
-			  </div>
-	</section>`
+	<div>
+		<section class="hero">
+				  <div class="hero-body">
+					<div class="container">
+					  <h1 class="title">
+						Cat Gallery
+					  </h1>
+					</div>
+				  </div>
+		</section>
+	</div>`
 });
-/* 	<li v-for="post in posts">{{ post.name}}</li> */
+
 
 var TileComponent = Vue.component('tile-component', {
 	template:`
+	<div>
 		  <div class="tile is-parent">
 			<article class="tile is-child box">
 				<p class="title">
 					<slot name="header-title"></slot>
 				</p>
-				<p class="content">
+				<p class="content-photo">
 					<slot name="content-photo"></slot>
 				</p>
 					<slot name="button-modal"></slot>
 			</article>	
 		  </div>
-		</div>`,
+		</div>
+	</div>`,
 	
 });
 
@@ -40,9 +44,8 @@ var ModalComponent = Vue.component('modal', {
 			<div class="modal-card">
 				<header class="modal-card-head">
 					<p class="modal-card-title">
-						<slot :name="modal-photo"></slot>
+						Tiger
 					</p>
-
 					<button class="modal-close" @click="$emit('close')" ></button>
 				</header>
 
@@ -53,13 +56,9 @@ var ModalComponent = Vue.component('modal', {
 					</p>
 					</div>
 				</section>
-
-				<footer class="modal-card-foot">
-					<slot name="footer"></slot>
-				</footer>
 			</div>
 		</div>
-</div>	`,
+</div>`,
 });
 
 Vue.component('modal-component', ModalComponent);
@@ -82,3 +81,4 @@ new Vue({
 		.catch(e => this.error.push(e));
 	}
 });
+

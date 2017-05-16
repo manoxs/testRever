@@ -1,0 +1,16 @@
+
+body 	
+		{ 
+			padding-top:40px; 
+		}
+#root div 
+		{
+			display: inline-block;
+			margin: 6px 8px;
+		}
+.content-photo 
+		{
+			display: block;
+			width: 400px;
+			height: 400px;
+		}
