@@ -1,14 +1,14 @@
 
-body 	
-		{ 
-			padding-top:40px; 
+body
+		{
+			padding-top:40px;
 		}
-#root div 
+#root div
 		{
 			display: inline-block;
 			margin: 6px 8px;
 		}
-.content-photo 
+.content-photo
 		{
 			display: block;
 			width: 400px;

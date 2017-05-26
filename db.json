@@ -1,7 +1,8 @@
+
 {
 "Cat":[
-{"id": 1, "name" : "Tabby", "imgAttribution" : "http://thecatapi.com/api/images/get?sub_id=d55format=src&type=gif"},
-{"id": 2, "name" : "Tiger", "imgAttribution" : "http://thecatapi.com/api/images/get?sub_id=3eoformat=src&type=gif" },
-{"id": 3, "name" : "Scaredy", "imgAttribution" : "http://thecatapi.com/api/images/get?sub_id=MTgzMzEyNQformat=src&type=gif" }
+{"id": 1, "name" : "Tabby", "image" : "http://lorempixel.com/400/200/cats/1/", "show": "false"},
+{"id": 2, "name" : "Tiger", "image" : "http://lorempixel.com/400/200/cats/2/", "show": "false" },
+{"id": 3, "name" : "Scaredy", "image" : "http://lorempixel.com/400/200/cats/3/", "show": "false" }
 ]
 }
