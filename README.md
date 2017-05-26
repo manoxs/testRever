@@ -2,8 +2,14 @@
 photo gallery
 
 Build with 
-npm install <http://bulma.io/>
 
-json-server --watch db.json
+Bulma.io <http://bulma.io/>
+Axios <https://github.com/mzabriskie/axios>
 
-http-server
+
+Run:
+$ npm install 
+
+$ json-server --watch db.json
+
+$ http-server
