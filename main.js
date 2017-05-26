@@ -27,11 +27,11 @@ var TileComponent = Vue.component('tile-component', {
 					<slot name="content-photo"></slot>
 				</p>
 					<slot name="button-modal"></slot>
-			</article>	
+			</article>
 		  </div>
 		</div>
 	</div>`,
-	
+
 });
 
 
@@ -40,33 +40,31 @@ var ModalComponent = Vue.component('modal', {
 <div>
 		<div class="modal is-active">
 		<div class="modal-background"></div>
-
 			<div class="modal-card">
 				<header class="modal-card-head">
 					<p class="modal-card-title">
-						Tiger
+						<slot name="modal-title"></slot>
 					</p>
 					<button class="modal-close" @click="$emit('close')" ></button>
 				</header>
-
 				<section class="modal-card-body">
 					<div class="modal-content">
 						<p class="image is-4by3">
-							<img src="http://thecatapi.com/api/images/get?format=src&type=gif"/>
-					</p>
+							<slot name="modal-photo"></slot>
+						</p>
 					</div>
 				</section>
 			</div>
 		</div>
-</div>`,
+</div>`
 });
 
 Vue.component('modal-component', ModalComponent);
 
-new Vue({	
+
+new Vue({
 	el: '#root',
 	data: {
-		showModal: false,
 		posts: [],
 		errors: []
 	},
@@ -81,4 +79,3 @@ new Vue({
 		.catch(e => this.error.push(e));
 	}
 });
-

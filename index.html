@@ -18,15 +18,19 @@
 		<div class="tile is-ancestor">
 			<tile-component  v-for="post in posts" :key="post.id">
 				<template slot="header-title">{{post.name}}</template>
-				<template slot="content-photo"><img :src= "post.imgAttribution"/> </template>
+				<template slot="content-photo"><img :src= "post.image"/> </template>
 				<template slot="button-modal">
-					<modal-component v-show="showModal" @close="showModal = false"></modal-component>
-					<a class="button is-primary" v-on:click="showModal=true">Show Cat</a>
+					<modal-component v-show="post.show" @close="post.show=false">
+						<template slot="modal-title">{{post.name}}</template>
+						<template slot="modal-photo"><img :src= "post.image"/></template>
+					</modal-component>
+					<a class="button is-primary" @click="post.show=true">Show Cat</a>
 				</template>
-			</tile-component>	
+			</tile-component>
 		</div>
 	</div>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.3.0/vue.js"></script>
-<script src="main.js"></script> 
+<script src="main.js"></script>
 </body>
 </html>
