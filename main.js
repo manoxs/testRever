@@ -61,23 +61,13 @@ var ModalComponent = Vue.component('modal', {
 
 Vue.component('modal-component', ModalComponent);
 
+
 new Vue({
 	el: '#root',
 	data: {
-		showModal: false,
 		posts: [],
 		errors: []
 	},
-	methods: {
-  	selectPost(post) {
-      this.selectPost = post
-      this.showModal = true
-    },
-    deselect() {
-    	this.selectPost = undefined
-      this.showModal = false
-    }
-  },
 	component: {
 		'hero-component': HeroComponent,
 		'modal-component': ModalComponent,
